@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  task-manager-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task-manager-bot
+    restart: unless-stopped
+
+    # Load all env vars from .env file
+    env_file:
+      - .env
+
+    volumes:
+      # Mount service account JSON (never bake secrets into image)
+      - ./service_account.json:/app/service_account.json:ro
+      # Persistent logs
+      - ./logs:/app/logs
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+    # Resource limits — suitable for small VPS (1-2 vCPU, 512MB+ RAM)
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: "256M"
+        reservations:
+          memory: "128M"
+
+    # Health check via Docker
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "src.agent.bot"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+    # Security
+    security_opt:
+      - no-new-privileges:true
+    read_only: false
+
+networks:
+  default:
+    name: task-manager-network
