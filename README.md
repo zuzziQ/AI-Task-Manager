@@ -11,9 +11,31 @@
 [![Google Sheets](https://img.shields.io/badge/Google_Sheets-API_v4-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)](https://developers.google.com/sheets/api)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
-[Tính Năng](#-tính-năng-nổi-bật) • [Kiến Trúc](#-kiến-trúc-hệ-thống) • [Luồng Nghiệp Vụ](#-luồng-duyệt--phê-duyệt-task-state-machine) • [Bài Toán Kỹ Thuật](#-những-bài-toán-kỹ-thuật-đã-giải-hard-engineering-problems) • [Cài Đặt & Triển Khai](#-hướng-dẫn-cài-đặt--triển-khai) • [Lệnh Bot](#-danh-mục-lệnh-bot-command-reference)
+[Tính Năng](#-tính-năng-nổi-bật) • [Ảnh Chụp Thực Tế](#-ảnh-chụp-màn-hình-thực-tế-production-showcase) • [Kiến Trúc](#-kiến-trúc-hệ-thống) • [Luồng Nghiệp Vụ](#-luồng-duyệt--phê-duyệt-task-state-machine) • [Bài Toán Kỹ Thuật](#-những-bài-toán-kỹ-thuật-đã-giải-hard-engineering-problems) • [Cài Đặt & Triển Khai](#-hướng-dẫn-cài-đặt--triển-khai)
+
+<br/>
+
+> 🌐 **Live Web Portal (Frontend):** [https://storymee-team.vercel.app](https://storymee-team.vercel.app)  
+> *(Bấm nút **"Truy cập tự do (Admin Demo)"** để vào thẳng Dashboard quản trị, Kanban, Nhân sự & Lịch họp không cần đăng nhập).*  
+> 🤖 **Telegram Bot:** [@StoryMeeBot](https://t.me/StoryMeeBot)
 
 </div>
+
+---
+
+## 📸 Ảnh Chụp Màn Hình Thực Tế (Production Showcase)
+
+Hệ thống bot và portal đang vận hành thực tế tại đội ngũ:
+
+| 1. Báo Cáo Đầu Ngày & Điểm Danh | 2. Trạng Thái Tiến Độ Đội Ngũ | 3. Quản Lý Task & Kế Hoạch Google Docs |
+|:---:|:---:|:---:|
+| <img src="docs/assets/01-telegram-daily-checkin.png" width="280" alt="Báo cáo đầu ngày và Điểm danh"/> | <img src="docs/assets/02-telegram-team-workload.png" width="280" alt="Trạng thái tiến độ đội ngũ"/> | <img src="docs/assets/03-telegram-project-docs.png" width="280" alt="Quản lý dự án & Kế hoạch docs"/> |
+| *Báo cáo đầu ngày (8h20), nút Vào ca Văn phòng / Remote / Tan ca và menu điều hướng nhanh* | *Tổng hợp tiến độ toàn bộ nhân sự: Review, Quá hạn, Done, Đang mở kèm trạng thái chi tiết* | *Chi tiết công việc dự án và tự động tích hợp preview kế hoạch Google Docs* |
+
+| 4. Đăng Ký Nghỉ Phép & Lịch Tương Tác | 5. Trợ Lý AI & Luồng Duyệt Quyền Admin |
+|:---:|:---:|
+| <img src="docs/assets/04-telegram-leave-calendar.png" width="300" alt="Đăng ký nghỉ phép và lịch tương tác"/> | <img src="docs/assets/05-telegram-ai-assistant.png" width="300" alt="Trợ lý AI và phê duyệt Admin"/> |
+| *Quy trình xin nghỉ phép / remote với bộ chọn ngày dạng lịch tương tác (Interactive Date Picker)* | *Giao tiếp ngôn ngữ tự nhiên với Trợ lý AI (/ai), phân quyền và gửi phê duyệt cho Admin* |
 
 ---
 
